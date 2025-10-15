@@ -30,7 +30,7 @@ void mesh_points::read_points_file(std::string file_path){
     int num_points;
     char throw_par;
     string_stream >> num_points >> throw_par;
-    std::cout << num_points << '\n' << std::endl; // sanity check the num_points by printing.
+    //std::cout << num_points << '\n' << std::endl; // sanity check the num_points by printing.
 
     // create variables for the x y z values of the points.
     // we assign values to clear them from the memory register to make sure the pattern works.
@@ -50,7 +50,7 @@ void mesh_points::read_points_file(std::string file_path){
 
 int main(){
     mesh_points my_points;
-    my_points.read_points_file("points.txt");
+    my_points.read_points_file("data/points.txt");
     my_points.print_points();
     return 0;
 }
