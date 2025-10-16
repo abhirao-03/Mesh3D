@@ -1,4 +1,4 @@
-all : point_reader face_reader
+all : point_reader face_reader cell_reader
 
 cell_reader : cell_reader.cpp cells.h
 	g++ cell_reader.cpp -o read_cells.o
