@@ -4,22 +4,22 @@
 
 class mesh_faces {
     public:
-        std::vector<std::vector<double>> face_connections;
+        std::vector<std::vector<int>> face_connections;
         int num_faces;
 
-        void add_face(std::tuple<double, double, double> face){
+        void add_face(std::vector<int> face){
             face_connections.push_back(face);
             num_faces = face_connections.size();
         };
 
-        void print_points(){
-            std::cout << "There are " << num_faces << " points." << std::endl;
-            for (std::tuple<double, double, double> faces : face_connections){
-                double x, y, z;
-                std::tie(x, y, z) = faces;
-                std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl;
+        void print_faces(){
+            std::cout << "There are " << num_faces << " faces." << std::endl;
+            for (std::vector<int> faces : face_connections){
+                for (auto i : faces){
+                    std::cout << i << " ";
+                };
             };
         };
 
-        void read_points_file(std::string file_path);
+        void read_faces_file(std::string file_path);
 };
