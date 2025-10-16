@@ -3,7 +3,7 @@
 #include <sstream>
 #include "headers/points.h"
 
-void mesh_points::read_points_file(std::string file_path){
+void MeshPoints::read_points_file(std::string file_path){
     std::ifstream inFile;
     std::string points;
     std::string entire_passage;
@@ -49,7 +49,7 @@ void mesh_points::read_points_file(std::string file_path){
 
 
 int main(){
-    mesh_points my_points;
+    MeshPoints my_points;
     my_points.read_points_file("data/points.txt");
     my_points.print_points();
     return 0;

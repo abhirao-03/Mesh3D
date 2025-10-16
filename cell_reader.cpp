@@ -3,7 +3,7 @@
 #include <sstream>
 #include "headers/cells.h"
 
-void mesh_cells::read_cells_file(std::string file_path){
+void MeshCells::read_cells_file(std::string file_path){
     std::ifstream inFile;
     std::string points;
     std::string entire_passage;
@@ -43,7 +43,7 @@ void mesh_cells::read_cells_file(std::string file_path){
 
 
 int main(){
-    mesh_cells my_cells;
+    MeshCells my_cells;
     my_cells.read_cells_file("data/cells.txt");
     my_cells.print_cells();
     return 0;

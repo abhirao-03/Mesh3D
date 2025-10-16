@@ -3,7 +3,7 @@
 #include <sstream>
 #include "headers/faces.h"
 
-void mesh_faces::read_faces_file(std::string file_path){
+void MeshFaces::read_faces_file(std::string file_path){
     std::ifstream inFile;
     std::string points;
     std::string entire_passage;
@@ -43,7 +43,7 @@ void mesh_faces::read_faces_file(std::string file_path){
 
 
 int main(){
-    mesh_faces my_faces;
+    MeshFaces my_faces;
     my_faces.read_faces_file("data/faces.txt");
     my_faces.print_faces();
     return 0;

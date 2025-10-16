@@ -2,11 +2,12 @@
 #include <tuple>
 #include <iostream>
 
-class mesh_faces {
-    public:
+class MeshFaces {
+    private:
         std::vector<std::vector<int>> face_connections;
         int num_faces;
 
+    public:
         void add_face(std::vector<int> face){
             face_connections.push_back(face);
             num_faces = face_connections.size();
@@ -23,6 +24,8 @@ class mesh_faces {
                 std::cout << ")" << std::endl;
             }
         }
+
+        int& get_num_faces() {return num_faces;}
 
         void read_faces_file(std::string file_path);
 };
