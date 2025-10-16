@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include "cells.h"
+#include "headers/cells.h"
 
 void mesh_cells::read_cells_file(std::string file_path){
     std::ifstream inFile;

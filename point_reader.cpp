@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include "points.h"
+#include "headers/points.h"
 
 void mesh_points::read_points_file(std::string file_path){
     std::ifstream inFile;
