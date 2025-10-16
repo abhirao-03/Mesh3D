@@ -6,9 +6,9 @@
 
 class Mesh3D {
     private:
-    MeshPoints mesh_points;
-    MeshCells  mesh_cells;
-    MeshFaces  mesh_faces;
+        MeshPoints mesh_points;
+        MeshCells  mesh_cells;
+        MeshFaces  mesh_faces;
     
 
     public:
@@ -22,5 +22,9 @@ class Mesh3D {
 
         int print_num_cells(){
             std::cout << "There are " << mesh_cells.get_num_cells() << " cells." << std::endl;
+        };
+        
+        std::vector<double> get_face_center(int cell_id, int face_id){
+
         };
 };
