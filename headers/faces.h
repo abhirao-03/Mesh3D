@@ -23,13 +23,13 @@ class Face {
             neighbour_cell_id = nbr_id;
         };
         
-    void print() const {
-    std::cout << "( ";
-        for (int index : point_composition) {
-            std::cout << index << " ";
-        }
-        std::cout << ")" << std::endl;
-    }
+        void print() const {
+            std::cout << "( ";
+                for (int index : point_composition) {
+                    std::cout << index << " ";
+                }
+                std::cout << ")" << std::endl;
+            }
 
 };
 
