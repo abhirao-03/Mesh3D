@@ -3,7 +3,7 @@
 #include <sstream>
 #include "headers/cells.h"
 
-void MeshCells::read_cells_file(std::string file_path){
+void CellCreator::read_cells_file(std::string file_path){
     std::ifstream inFile;
     std::string points;
     std::string entire_passage;
@@ -25,7 +25,7 @@ void MeshCells::read_cells_file(std::string file_path){
     string_stream >> num_cells >> throw_par;
     
     int num_faces_in_cell;
-
+    int cell_id = 0;
     while (string_stream >> num_faces_in_cell >> throw_par){
             std::vector<int> face_points;
             int face;
@@ -36,14 +36,15 @@ void MeshCells::read_cells_file(std::string file_path){
             };
 
             string_stream >> throw_par;
-            add_cell(face_points);
+            Cell new_cell(cell_id, face_points);
+            add_cell(new_cell);
     };
 
 };
 
 
 int main(){
-    MeshCells my_cells;
+    CellCreator my_cells;
     my_cells.read_cells_file("data/cells.txt");
     my_cells.print_cells();
     return 0;
