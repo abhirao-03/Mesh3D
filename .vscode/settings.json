@@ -50,6 +50,8 @@
         "locale": "cpp",
         "mutex": "cpp",
         "print": "cpp",
-        "string_view": "cpp"
+        "string_view": "cpp",
+        "__bit_reference": "cpp",
+        "__split_buffer": "cpp"
     }
 }
