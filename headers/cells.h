@@ -17,7 +17,7 @@ class Cell {
             cell_center = std::make_tuple(-1, -1, -1);
 
         }
-
+        std::vector<int> get_face_composition() const {return face_composition;};
         void set_cell_id(int new_id){cell_id = new_id;};    
         void set_cell_volume(double new_vol){cell_volume = new_vol;};
         void set_cell_center(std::tuple<double, double, double> new_center){cell_center = new_center;};
@@ -49,7 +49,11 @@ class CellCreator {
             };
         }
 
-        int& get_num_cells() {return num_cells;}
+        int get_num_cells() {return num_cells;}
 
         void read_cells_file(std::string file_path);
+
+        Cell get_cell(int cell_id){
+            return cell_objects[cell_id];
+        }
 };

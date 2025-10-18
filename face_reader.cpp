@@ -42,9 +42,9 @@ void FaceCreator::read_faces_file(std::string file_path){
 
 };
 
-int main(){
-    FaceCreator my_faces;
-    my_faces.read_faces_file("data/faces.txt");
-    my_faces.print_faces();
-    return 0;
-}
+// int main(){
+//     FaceCreator my_faces;
+//     my_faces.read_faces_file("data/faces.txt");
+//     my_faces.print_faces();
+//     return 0;
+// }

@@ -22,7 +22,9 @@ class PointsCreator {
             };
         };
 
-        int& get_num_points() {return num_points;};
+        std::vector<double> get_point(int point_id){return point_positions[point_id];}
+
+        int get_num_points() {return num_points;}
 
         void read_points_file(std::string file_path);
 };

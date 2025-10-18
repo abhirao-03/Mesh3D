@@ -43,9 +43,9 @@ void CellCreator::read_cells_file(std::string file_path){
 };
 
 
-int main(){
-    CellCreator my_cells;
-    my_cells.read_cells_file("data/cells.txt");
-    my_cells.print_cells();
-    return 0;
-}
+// int main(){
+//     CellCreator my_cells;
+//     my_cells.read_cells_file("data/cells.txt");
+//     my_cells.print_cells();
+//     return 0;
+// }

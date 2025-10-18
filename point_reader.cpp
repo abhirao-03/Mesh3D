@@ -49,9 +49,9 @@ void PointsCreator::read_points_file(std::string file_path){
 };
 
 
-int main(){
-    PointsCreator my_points;
-    my_points.read_points_file("data/points.txt");
-    my_points.print_points();
-    return 0;
-}
+// int main(){
+//     PointsCreator my_points;
+//     my_points.read_points_file("data/points.txt");
+//     my_points.print_points();
+//     return 0;
+// }

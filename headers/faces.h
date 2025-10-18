@@ -30,6 +30,8 @@ class Face {
                 }
                 std::cout << ")" << std::endl;
             }
+        
+        std::vector<int> get_point_composition() const {return point_composition;}
 
 };
 
@@ -39,6 +41,9 @@ class FaceCreator {
         std::vector<Face> face_objects;
 
     public:
+
+        Face get_face(int face_id){return face_objects[face_id];};
+
         void add_face(Face face){
             face_objects.push_back(face);
             num_faces = face_objects.size();
@@ -51,7 +56,7 @@ class FaceCreator {
             };
         }
 
-        int& get_num_faces() {return num_faces;}
+        int get_num_faces() {return num_faces;}
 
         void read_faces_file(std::string file_path);
 };
