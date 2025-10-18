@@ -6,10 +6,9 @@
 
 class Mesh3D {
     private:
-        MeshPoints mesh_points;
-        MeshCells  mesh_cells;
-        MeshFaces  mesh_faces;
-    
+        PointsCreator mesh_points;
+        CellCreator  mesh_cells;
+        FaceCreator  mesh_faces;
 
     public:
         int print_num_points(){
