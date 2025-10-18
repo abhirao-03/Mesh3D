@@ -1,22 +1,23 @@
 #include <vector>
 #include <tuple>
 #include <iostream>
-class MeshPoints {
+class PointsCreator {
     private:
-        std::vector<std::tuple<double, double, double>> point_positions;
+        std::vector<std::vector<double>> point_positions;
         int num_points;
     
     public:
-        void add_point(std::tuple<double, double, double> point){
+        void add_point(std::vector<double> point){
             point_positions.push_back(point);
             num_points = point_positions.size();
         };
 
         void print_points(){
             std::cout << "There are " << num_points << " points." << std::endl;
-            for (std::tuple<double, double, double> point : point_positions){
-                double x, y, z;
-                std::tie(x, y, z) = point;
+            for (std::vector<double> point : point_positions){
+                double x = point[0];
+                double y = point[1];
+                double z = point[2];
                 std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl;
             };
         };

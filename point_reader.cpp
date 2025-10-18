@@ -3,7 +3,7 @@
 #include <sstream>
 #include "headers/points.h"
 
-void MeshPoints::read_points_file(std::string file_path){
+void PointsCreator::read_points_file(std::string file_path){
     std::ifstream inFile;
     std::string points;
     std::string entire_passage;
@@ -43,13 +43,14 @@ void MeshPoints::read_points_file(std::string file_path){
     while (string_stream >> openPar >> x >> y >> z >> closePar){
         // sanity checking pattern printing for points.
         // std::cout << "x is: " << x << " y is: " << y << " z is: " << z << std::endl;
-        add_point(std::make_tuple(x, y, z));
+        std::vector<double> extracted_points = {x, y, z};
+        add_point(extracted_points);
     }
 };
 
 
 int main(){
-    MeshPoints my_points;
+    PointsCreator my_points;
     my_points.read_points_file("data/points.txt");
     my_points.print_points();
     return 0;
