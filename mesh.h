@@ -13,9 +13,14 @@ class Mesh3D {
 
     public:
         Mesh3D(std::string points_fp, std::string faces_fp, std::string cells_fp);
+
         void print_all_points();
         void print_all_faces();
         void print_all_cells();
+
+        double get_cell_volume(int cell_id);
+        double get_face_area(int cell_id, int face_id);
+
         std::vector<double> get_cell_center(int cell_id);
-        std::vector<double> get_face_center(int cell_id, int face_pos);
+        std::vector<double> get_face_center(int cell_id, int face_id);
 };
