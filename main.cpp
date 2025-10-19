@@ -1,4 +1,4 @@
-#include <mesh.h>
+#include "mesh.h"
 
 int main(){
     Mesh3D test_mesh("data/points.txt", "data/faces.txt", "data/cells.txt");
@@ -15,7 +15,7 @@ int main(){
         std::cout << ")" << std::endl;
 
 
-    std::vector<double> face_center_0 = test_mesh.get_face_center(0, 0);
+    std::vector<double> face_center_0 = test_mesh.get_face_center(0, 1);
 
     std::cout << "( ";
         for (double index : face_center_0) {
