@@ -24,5 +24,10 @@ int main(){
         std::cout << ")" << std::endl;
 
 
+    double test_area = test_mesh.get_face_area(0, 0);
+
+    std::cout << "Area: " << test_area << std::endl;
+
+
     return 0;
 }

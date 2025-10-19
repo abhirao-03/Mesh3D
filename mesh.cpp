@@ -42,8 +42,17 @@ double Mesh3D::get_face_area(int cell_id, int face_id){
         double x_in_diff = mesh_points.get_point(p_idx)[0] - face_center[0];
         double y_in_diff = mesh_points.get_point(p_idx)[1] - face_center[1];
         double z_in_diff = mesh_points.get_point(p_idx)[2] - face_center[2];
-        inner_vectors.push_back({x_in_diff, y_in_diff, z_in_diff});
+        inner_vectors.push_back({x_in_diff, y_in_diff, z_in_diff});        
     };
+
+    double area = 0;
+
+    for (int v_idx = 1; v_idx < inner_vectors.size(); v_idx++){
+        area += calc_area_triangle(inner_vectors[v_idx - 1], inner_vectors[v_idx]);
+    };
+
+    return area;
+
 };
 
 std::vector<double> Mesh3D::get_cell_center(int cell_id){
