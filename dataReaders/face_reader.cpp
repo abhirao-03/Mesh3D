@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include "headers/faces.h"
+#include "../headers/faces.h"
 
 void FaceCreator::read_faces_file(std::string file_path){
     std::ifstream inFile;

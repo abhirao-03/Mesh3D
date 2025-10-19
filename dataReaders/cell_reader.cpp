@@ -1,7 +1,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
-#include "headers/cells.h"
+#include "../headers/cells.h"
 
 void CellCreator::read_cells_file(std::string file_path){
     std::ifstream inFile;
